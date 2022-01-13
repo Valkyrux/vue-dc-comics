@@ -4,25 +4,25 @@
     <Main></Main>
     <Services></Services>
     <FooterTop></FooterTop>
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <FooterBottom></FooterBottom>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 import Header from "./components/Header.vue"
 import Main from "./components/Main.vue"
 import Services from "./components/Services.vue"
 import FooterTop from "./components/FooterTop.vue"
+import FooterBottom from "./components/FooterBottom.vue"
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
     Header,
     Main,
     Services,
     FooterTop,
+    FooterBottom,
   },
 };
 </script>
