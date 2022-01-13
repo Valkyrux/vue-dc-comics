@@ -3,6 +3,7 @@
     <Header></Header>
     <Main></Main>
     <Services></Services>
+    <FooterTop></FooterTop>
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
@@ -12,6 +13,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 import Header from "./components/Header.vue"
 import Main from "./components/Main.vue"
 import Services from "./components/Services.vue"
+import FooterTop from "./components/FooterTop.vue"
 
 export default {
   name: "App",
@@ -20,6 +22,7 @@ export default {
     Header,
     Main,
     Services,
+    FooterTop,
   },
 };
 </script>

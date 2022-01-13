@@ -45,11 +45,13 @@ ul {
   height: 100%;
   padding: 0;
 }
+
 li {
   display: inline-block;
   height: 100%;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
   display:block;
