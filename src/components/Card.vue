@@ -1,8 +1,8 @@
 <template>
   <li>
-  <img :src="imgPath"::alt="imgDescr">
-  <h3>imgTitle</h3>
-</li>
+    <img :src="imgPath" :alt="imgDescr">
+    <h3>{{imgTitle}}</h3>
+  </li>
 </template>
 
 <script>

@@ -5,12 +5,13 @@
     </div>
     <ul>
       <Card
-        :img-path="ok"
-        :img-descr="ciro"
-        :img-title= "Ao"
-      />
+      v-for= "(comic, index) in comics"
+      :key="index"
+      :img-path="comic.thumb"
+      :img-descr="comic.type"
+      :img-title="comic.series" />
     </ul>
-
+    <button type="button" name="button" @click="console.log(comics)">click</button>
   </main>
 </template>
 
@@ -18,7 +19,17 @@
 import Card from "./Card.vue";
 export default {
   name: "Main",
-  props: {
+  components: {
+    Card,
+  },
+  data () {
+    return {
+      comics: [],
+    }
+  },
+  created() {
+    this.comics = require('../assets/dc-comics.json');
+    console.log(this.comics);
   },
 };
 </script>

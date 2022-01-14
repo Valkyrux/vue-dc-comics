@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import Header from "./components/Header.vue"
-import Main from "./components/Main.vue"
-import Services from "./components/Services.vue"
-import FooterTop from "./components/FooterTop.vue"
-import FooterBottom from "./components/FooterBottom.vue"
+import Header from "./components/Header.vue";
+import Main from "./components/Main.vue";
+import Services from "./components/Services.vue";
+import FooterTop from "./components/FooterTop.vue";
+import FooterBottom from "./components/FooterBottom.vue";
 
 export default {
   name: "App",
