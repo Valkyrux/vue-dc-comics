@@ -28,9 +28,6 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
+@import "./assets/scss/style.scss";
+@import "./assets/scss/partial/_mixins.scss";
 </style>
