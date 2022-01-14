@@ -1,17 +1,18 @@
 <template>
   <main>
-    <div class="">
-        --&#62;Content goes Here&#60;--
+    <div class="container">
+      <div class="main-top">
+          --&#62;Content goes Here&#60;--
+      </div>
+      <ul>
+        <Card
+        v-for= "(comic, index) in comics"
+        :key="index"
+        :img-path="comic.thumb"
+        :img-descr="comic.type"
+        :img-title="comic.series" />
+      </ul>
     </div>
-    <ul>
-      <Card
-      v-for= "(comic, index) in comics"
-      :key="index"
-      :img-path="comic.thumb"
-      :img-descr="comic.type"
-      :img-title="comic.series" />
-    </ul>
-    <button type="button" name="button" @click="console.log(comics)">click</button>
   </main>
 </template>
 
@@ -29,13 +30,18 @@ export default {
   },
   created() {
     this.comics = require('../assets/dc-comics.json');
-    console.log(this.comics);
   },
 };
 </script>
 
 <style scoped lang="scss">
+  @import "../assets/scss/partial/_mixins.scss";
+  @import "../assets/scss/partial/_commons.scss";
   main {
     background-color: black;
+  }
+
+  ul {
+    @include flex-set(space-between, centre, true);
   }
 </style>
