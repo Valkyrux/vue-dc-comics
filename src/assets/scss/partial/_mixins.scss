@@ -1,8 +1,8 @@
 @mixin flex-set($justify-content, $align-items, $flex-wrap: false) {
   display: flex;
   justify-content: $justify-content;
-  @if $flex-wrap {
   align-items: $align-items;
+  @if $flex-wrap {
     flex-wrap: wrap;
   }
 }

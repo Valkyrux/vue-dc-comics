@@ -12,6 +12,7 @@
         :img-descr="comic.type"
         :img-title="comic.series" />
       </ul>
+      <button>Load more</button>
     </div>
   </main>
 </template>
@@ -37,8 +38,10 @@ export default {
 <style scoped lang="scss">
   @import "../assets/scss/partial/_mixins.scss";
   @import "../assets/scss/partial/_commons.scss";
+  @import "../assets/scss/partial/_variables.scss";
+
   main {
-    background-color: black;
+    background-color: $black;
   }
 
   ul {

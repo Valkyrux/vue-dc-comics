@@ -1,44 +1,46 @@
 <template>
   <footer>
-    <div>
-      <h3>Titolo</h3>
-      <ul>
-        <li><a>a link</a></li>
-        <li><a>a link</a></li>
-        <li><a>a link</a></li>
-        <li><a>a link</a></li>
-        <li><a>a link</a></li>
-      </ul>
-      <h3>Titolo</h3>
-      <ul>
-        <li><a>a link</a></li>
-        <li><a>a link</a></li>
-      </ul>
+    <div class="container">
+      <div>
+        <h3>Titolo</h3>
+        <ul>
+          <li><a>a link</a></li>
+          <li><a>a link</a></li>
+          <li><a>a link</a></li>
+          <li><a>a link</a></li>
+          <li><a>a link</a></li>
+        </ul>
+        <h3>Titolo</h3>
+        <ul>
+          <li><a>a link</a></li>
+          <li><a>a link</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Titolo</h3>
+        <ul>
+          <li><a>a link</a></li>
+          <li><a>a link</a></li>
+          <li><a>a link</a></li>
+          <li><a>a link</a></li>
+          <li><a>a link</a></li>
+          <li><a>a link</a></li>
+          <li><a>a link</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Titolo</h3>
+        <ul>
+          <li><a>a link</a></li>
+          <li><a>a link</a></li>
+          <li><a>a link</a></li>
+          <li><a>a link</a></li>
+          <li><a>a link</a></li>
+          <li><a>a link</a></li>
+        </ul>
+      </div>
+      <img src="./../assets/img/dc-logo-bg.png">
     </div>
-    <div>
-      <h3>Titolo</h3>
-      <ul>
-        <li><a>a link</a></li>
-        <li><a>a link</a></li>
-        <li><a>a link</a></li>
-        <li><a>a link</a></li>
-        <li><a>a link</a></li>
-        <li><a>a link</a></li>
-        <li><a>a link</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>Titolo</h3>
-      <ul>
-        <li><a>a link</a></li>
-        <li><a>a link</a></li>
-        <li><a>a link</a></li>
-        <li><a>a link</a></li>
-        <li><a>a link</a></li>
-        <li><a>a link</a></li>
-      </ul>
-    </div>
-    <img src="./../assets/img/dc-logo-bg.png">
   </footer>
 </template>
 
@@ -51,13 +53,18 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import "../assets/scss/partial/_commons";
   footer {
     background-image: url("./../assets/img/footer-bg.jpg");
-    display: flex;
+    padding: 50px 0;
+    overflow: hidden;
+  }
+
+  .container {
     position: relative;
+    display: flex;
     align-items: flex-start;
     color: white;
-    overflow: hidden;
   }
 
   div {

@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <ul>
+    <ul class="container">
       <li>
         <a><img src="./../assets/img/buy-comics-digital-comics.png"> digital comics</a>
       </li>
@@ -29,8 +29,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import "../assets/scss/partial/_commons.scss";
+  @import "../assets/scss/partial/_variables.scss";
+
   nav {
-    background-color: blue;
+    background-color: $blue;
     color: white;
     height: 100px;
   }

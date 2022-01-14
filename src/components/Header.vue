@@ -3,17 +3,8 @@
     <nav class="container">
       <img src="./../assets/img/dc-logo.png" />
       <ul>
-        <li>
-          <a>menu-item</a>
-        </li>
-        <li>
-          <a>menu-item</a>
-        </li>
-        <li>
-          <a>menu-item</a>
-        </li>
-        <li>
-          <a>menu-item</a>
+        <li v-for="(voice,index) in menuVoices" :key="index">
+          <a :href="voice.hRef" :class="(index==activeVoice)?'active':''" @click="setActiveVoice(index)">{{voice.title}}</a>
         </li>
       </ul>
     </nav>
@@ -23,13 +14,65 @@
 <script>
 export default {
   name: "Header",
-  props: {},
+  data() {
+    return {
+      activeVoice: 1,
+      menuVoices: [
+        {
+          title: "characters",
+          hRef: "#"
+        },
+        {
+          title: "comics",
+          hRef: "#"
+        },
+        {
+          title: "movies",
+          hRef: "#"
+        },
+        {
+          title: "tv",
+          hRef: "#"
+        },
+        {
+          title: "games",
+          hRef: "#"
+        },
+        {
+          title: "collectibles",
+          hRef: "#"
+        },
+        {
+          title: "videos",
+          hRef: "#"
+        },
+        {
+          title: "fans",
+          hRef: "#"
+        },
+        {
+          title: "news",
+          hRef: "#"
+        },
+        {
+          title: "shop",
+          hRef: "#"
+        },
+      ]
+    }
+  },
+  methods: {
+    setActiveVoice(index) {
+      this.activeVoice = index;
+    }
+  }
 };
 </script>
 
 <style scoped lang="scss">
 @import "../assets/scss/partial/_commons.scss";
 @import "../assets/scss/partial/_mixins.scss";
+@import "../assets/scss/partial/_variables.scss";
 
 header {
     background-color: #ffffff;
@@ -42,7 +85,7 @@ nav {
 }
 
 img {
-    height: 80%;
+    height: 66%;
 }
 
 ul {
@@ -54,19 +97,24 @@ ul {
 li {
     display: inline-block;
     height: 100%;
-    margin: 0 10px;
+    margin: 0 7px;
 }
 
 a {
-    color: #42b983;
+    color: #000000;
+    text-decoration: none;
     display: block;
+    font-size: 0.6em;
     height: 100%;
     text-transform: uppercase;
     display: flex;
     align-items: center;
+    cursor: pointer;
     &:active,
+    &.active,
     &:hover {
-        border-bottom: 2px solid blue;
+        color: $blue;
+        border-bottom: 3px solid $blue;
     }
 }
 </style>
