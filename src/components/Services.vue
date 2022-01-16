@@ -23,8 +23,15 @@
 <script>
 export default {
   name: "Services",
-  props: {
+  data() {
+    return {
+      serviceList: [],
+    }
   },
+  created() {
+    this.serviceList = require('../assets/service-list.json');
+
+  }
 };
 </script>
 
