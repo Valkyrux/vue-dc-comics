@@ -1,22 +1,27 @@
 [
   {
   "name": "digital comics",
-  "img-file": "buy-digital-comics.png"
+  "imgPath": "buy-comics-digital-comics.png",
+  "href": "#"
   },
   {
   "name": "DC merchandase",
-  "img-file": "buy-comics-merchandise.png"
+  "imgPath": "buy-comics-merchandise.png",
+  "href": "#"
   },
   {
   "name": "subscription",
-  "img-file": "buy-comics-subscription.png"
+  "imgPath": "buy-comics-subscriptions.png",
+  "href": "#"
   },
   {
   "name": "comic shop locator",
-  "img-file": "buy-comics-shop-locator.png"
+  "href": "#",
+  "imgPath": "buy-comics-shop-locator.png"
   },
   {
   "name": "DC power visa",
-  "img-file": "buy-dc-power-visa.png"
-  },
+  "imgPath": "buy-dc-power-visa.svg",
+  "href": "#"
+  }
 ]

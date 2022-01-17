@@ -1,28 +1,23 @@
 <template>
   <nav>
     <ul class="container">
-      <li>
-        <a><img src="./../assets/img/buy-comics-digital-comics.png"> digital comics</a>
-      </li>
-      <li>
-        <a><img src="./../assets/img/buy-comics-digital-comics.png"> digital comics</a>
-      </li>
-      <li>
-        <a><img src="./../assets/img/buy-comics-digital-comics.png"> digital comics</a>
-      </li>
-      <li>
-        <a><img src="./../assets/img/buy-comics-digital-comics.png"> digital comics</a>
-      </li>
-      <li>
-        <a><img src="./../assets/img/buy-comics-digital-comics.png"> digital comics</a>
-      </li>
+      <ServiceIcon
+        v-for="(service, index) in serviceList"
+        :key ="index"
+        :link = "service.href"
+        :path="require('../assets/img/' + service.imgPath)"
+        :text="service.name"/>
     </ul>
   </nav>
 </template>
 
 <script>
+import ServiceIcon from "./ServiceIcon.vue";
 export default {
   name: "Services",
+  components: {
+    ServiceIcon,
+  },
   data() {
     return {
       serviceList: [],
@@ -30,8 +25,7 @@ export default {
   },
   created() {
     this.serviceList = require('../assets/service-list.json');
-
-  }
+  },
 };
 </script>
 
@@ -51,21 +45,5 @@ export default {
     padding: 0;
     display: flex;
     justify-content: space-between;
-  }
-
-  li {
-    display: flex;
-    height: 100%;
-  }
-
-  a {
-    display: block;
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
-
-  img {
-    height: 40%;
   }
 </style>
